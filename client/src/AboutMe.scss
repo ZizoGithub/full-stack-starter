@@ -1,4 +1,10 @@
+body{
+  //background-color: #fcf8e8;
+  background-color: rgba(252,248,232,1);
+}
+
 #about-me {  
+  background-color: #a3d2ca;
   img {
     border-radius: 50%;
   }
@@ -6,5 +12,6 @@
   h1 {
     text-align: center;
     margin-bottom: 2rem;
+    color: black;
   }
 }
