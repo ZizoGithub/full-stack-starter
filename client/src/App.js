@@ -14,6 +14,8 @@ import Passwords from './Passwords';
 import Register from './Register';
 import SectionItems from './SectionItems';
 import Components from './Components';
+import Sections from './Sections/Sections';
+import SectionsList from './Sections/SectionsList';
 
 function App() {
   return (
@@ -30,9 +32,14 @@ function App() {
           <Route path="/passwords">
             <Passwords />
           </Route>
+
           <Route path="/components">
             <Components />
           </Route>
+          <Route path="/sections">
+            <Sections />
+          </Route>
+          
           {process.env.REACT_APP_FEATURE_REGISTRATION === 'true' && (
             <Route path="/register">
               <Register />
