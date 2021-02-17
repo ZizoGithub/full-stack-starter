@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-
+import {Link} from 'react-router-dom';
 import Api from '../Api';
 
 function SectionsList(){
@@ -12,9 +12,10 @@ function SectionsList(){
     return(
         <main className="container">
 <h1>SectionsList</h1>
+<Link className="btn btn-primary" to="/sections/new">New</Link>
 <ul>
     {sections.map(s => (
-        <li>{s.name}</li>
+        <li>{s.name}, {s.slug}, {s.position}</li>
     ))}
     </ul>
     </main>
