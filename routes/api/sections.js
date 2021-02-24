@@ -28,7 +28,7 @@ router.post('/', interceptors.requireLogin, async function(req, res) {
 router.get('/:id', async function(req, res) {
   const section = await models.Section.findByPk(req.params.id);
   if (section) {
-    await section.destroy();
+   //await section.destroy();
     res.json(section);
   } else {
     res.status(HttpStatus.NOT_FOUND).end();
