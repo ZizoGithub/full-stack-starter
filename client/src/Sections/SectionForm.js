@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Api from "../Api";
 import { useHistory } from "react-router-dom";
+import Api from "../Api";
 
 function SectionForm() {
     const history = useHistory();
@@ -25,31 +25,27 @@ function SectionForm() {
             console.log(error);
         }
     }
-
     return (
         <main className="container">
             <h1>Section Form</h1>
-            <form onSubmit = {onSubmit}>
+            <form onSubmit={onSubmit}>
                 <div className="mb-3">
                     <label className="form-label">Name</label>
-                    <input className="form-control" type="text" name="name" value={section.name} onChange={onChange}></input>
+                    <input className="form-control" type="text" name="name" value={section.name} onChange={onChange} />
                 </div>
-            </form>
-            <form>
                 <div className="mb-3">
                     <label className="form-label">Slug</label>
-                    <input className="form-control" type="text" name="slug" value={section.slug} onChange={onChange}></input>
+                    <input className="form-control" type="text" name="slug" value={section.slug} onChange={onChange} />
                 </div>
-            </form>
-            <form>
                 <div className="mb-3">
                     <label className="form-label">Position</label>
-                    <input className="form-control" type="text" name="position" value={section.position} onChange={onChange}></input>
+                    <input className="form-control" type="text" name="position" value={section.position} onChange={onChange} />
                 </div>
-                <button className="btn btn-primary" type="submit">submit</button>
+                <button className="btn btn-primary" type="submit">Submit</button>
             </form>
-            
+            <p>{JSON.stringify(section)}</p>
         </main>
     );
 }
+
 export default SectionForm;
